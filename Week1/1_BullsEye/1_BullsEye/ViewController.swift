@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         
         let trackRightImage = #imageLiteral(resourceName: "SmallButton")
         let trackRightResizeable = trackRightImage.resizableImage(withCapInsets: insets)
-        slider.setMaximumTrackImage(trackLeftResizeable, for: .normal)
+        slider.setMaximumTrackImage(trackRightResizeable, for: .normal)
         
     }
     

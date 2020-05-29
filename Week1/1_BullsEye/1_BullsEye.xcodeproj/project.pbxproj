@@ -15,10 +15,12 @@
 		7DA03F84247DFD780076FC02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DA03F82247DFD780076FC02 /* LaunchScreen.storyboard */; };
 		7DA03F8C247F60850076FC02 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA03F8B247F60850076FC02 /* AboutViewController.swift */; };
 		7DA03F8E247F626D0076FC02 /* AboutAuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA03F8D247F626D0076FC02 /* AboutAuthorViewController.swift */; };
+		7DA80E4024809A9700462139 /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = 7DA80E3F24809A9700462139 /* BullsEye.html */; };
+		7DA80E432480A3AB00462139 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA80E422480A3AA00462139 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7DA03F74247DFD770076FC02 /* 1_BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1_BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DA03F74247DFD770076FC02 /* Bull's Eye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bull's Eye.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA03F77247DFD770076FC02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DA03F79247DFD770076FC02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7DA03F7B247DFD770076FC02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		7DA03F85247DFD780076FC02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DA03F8B247F60850076FC02 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		7DA03F8D247F626D0076FC02 /* AboutAuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAuthorViewController.swift; sourceTree = "<group>"; };
+		7DA80E3F24809A9700462139 /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
+		7DA80E422480A3AA00462139 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA80E432480A3AB00462139 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,13 +51,14 @@
 			children = (
 				7DA03F76247DFD770076FC02 /* 1_BullsEye */,
 				7DA03F75247DFD770076FC02 /* Products */,
+				7DA80E412480A3AA00462139 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		7DA03F75247DFD770076FC02 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7DA03F74247DFD770076FC02 /* 1_BullsEye.app */,
+				7DA03F74247DFD770076FC02 /* Bull's Eye.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,8 +75,17 @@
 				7DA03F80247DFD780076FC02 /* Assets.xcassets */,
 				7DA03F82247DFD780076FC02 /* LaunchScreen.storyboard */,
 				7DA03F85247DFD780076FC02 /* Info.plist */,
+				7DA80E3F24809A9700462139 /* BullsEye.html */,
 			);
 			path = 1_BullsEye;
+			sourceTree = "<group>";
+		};
+		7DA80E412480A3AA00462139 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DA80E422480A3AA00462139 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,7 +105,7 @@
 			);
 			name = 1_BullsEye;
 			productName = 1_BullsEye;
-			productReference = 7DA03F74247DFD770076FC02 /* 1_BullsEye.app */;
+			productReference = 7DA03F74247DFD770076FC02 /* Bull's Eye.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -132,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DA03F84247DFD780076FC02 /* LaunchScreen.storyboard in Resources */,
+				7DA80E4024809A9700462139 /* BullsEye.html in Resources */,
 				7DA03F81247DFD780076FC02 /* Assets.xcassets in Resources */,
 				7DA03F7F247DFD770076FC02 /* Main.storyboard in Resources */,
 			);
@@ -299,7 +315,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.chunwu.--BullsEye";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bull's Eye";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -316,7 +332,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.chunwu.--BullsEye";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bull's Eye";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
