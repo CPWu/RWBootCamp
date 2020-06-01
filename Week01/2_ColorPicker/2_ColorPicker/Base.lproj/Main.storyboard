@@ -58,7 +58,7 @@
                                                                 <color key="textColor" red="0.97647058819999999" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cA-KX-Qqr">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cA-KX-Qqr">
                                                                 <rect key="frame" x="205" y="0.0" width="120" height="35"/>
                                                                 <color key="backgroundColor" red="0.066666666669999999" green="0.1764705882" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
@@ -180,6 +180,9 @@
                                                                         <state key="normal" title="Reset">
                                                                             <color key="titleColor" red="0.086274509799999996" green="0.14117647059999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="resetAppPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cWU-HI-fgM"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiJ-60-5wf">
                                                                         <rect key="frame" x="147" y="0.0" width="64" height="30"/>
@@ -200,8 +203,18 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1c-eZ-ntV">
+                                <rect key="frame" x="175" y="635" width="25" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.97647058819999999" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PEJ-G6-hyA" kind="presentation" id="hpx-TB-zKo"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.97647058823529409" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="MMz-2S-XNl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="9zf-hh-5Wh"/>
                             <constraint firstItem="MMz-2S-XNl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="CML-Ni-FV0"/>
@@ -215,12 +228,63 @@
                         <outlet property="firstColorValueLabel" destination="o5r-ad-esb" id="quI-nh-bYI"/>
                         <outlet property="secondColorLabel" destination="bcW-De-rzu" id="qLa-ut-1dS"/>
                         <outlet property="secondColorValueLabel" destination="0hw-eD-rth" id="uDB-t4-jSy"/>
+                        <outlet property="sliderOne" destination="KZC-rh-3v0" id="vKQ-Q3-K6P"/>
+                        <outlet property="sliderThree" destination="Vv0-B6-2GS" id="LQU-KV-SHX"/>
+                        <outlet property="sliderTwo" destination="Usa-EC-Hdb" id="SEU-Ky-GK6"/>
                         <outlet property="thirdColorLabel" destination="RE5-Wu-8xP" id="3yg-21-wA5"/>
                         <outlet property="thirdColorValueLabel" destination="KRH-1d-soZ" id="K5A-Ee-Kbh"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+        <!--AboutRGB View Controller-->
+        <scene sceneID="Pwq-EF-c5G">
+            <objects>
+                <viewController id="PEJ-G6-hyA" customClass="AboutRGBViewController" customModule="Color_Picker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X1a-Ng-Qhy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bR8-aw-RQV">
+                                <rect key="frame" x="5" y="15" width="365" height="800"/>
+                                <subviews>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EnF-gr-E2g">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="400"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="400" id="pQJ-zF-klm"/>
+                                        </constraints>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pi7-Xw-LTl">
+                                        <rect key="frame" x="0.0" y="400" width="365" height="400"/>
+                                        <state key="normal" title="Close"/>
+                                        <connections>
+                                            <action selector="close:" destination="PEJ-G6-hyA" eventType="touchUpInside" id="osO-gt-Ee2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bR8-aw-RQV" firstAttribute="leading" secondItem="zen-J3-rPD" secondAttribute="leading" constant="5" id="JkD-NZ-ppb"/>
+                            <constraint firstItem="zen-J3-rPD" firstAttribute="trailing" secondItem="bR8-aw-RQV" secondAttribute="trailing" constant="5" id="LPW-hy-lAK"/>
+                            <constraint firstItem="bR8-aw-RQV" firstAttribute="top" secondItem="zen-J3-rPD" secondAttribute="top" constant="15" id="lRf-zT-FkE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zen-J3-rPD"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="EnF-gr-E2g" id="Ztu-AU-pef"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOS-QY-quw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="985" y="138"/>
         </scene>
     </scenes>
 </document>

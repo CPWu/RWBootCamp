@@ -13,6 +13,8 @@
 		7D0851E224847F2700573EAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D0851E024847F2700573EAD /* Main.storyboard */; };
 		7D0851E424847F2700573EAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D0851E324847F2700573EAD /* Assets.xcassets */; };
 		7D0851E724847F2700573EAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D0851E524847F2700573EAD /* LaunchScreen.storyboard */; };
+		7D0851EF2484BEBA00573EAD /* AboutRGBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0851EE2484BEBA00573EAD /* AboutRGBViewController.swift */; };
+		7D0851F22484C25800573EAD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0851F12484C25800573EAD /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7D0851E324847F2700573EAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D0851E624847F2700573EAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D0851E824847F2700573EAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D0851EE2484BEBA00573EAD /* AboutRGBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRGBViewController.swift; sourceTree = "<group>"; };
+		7D0851F12484C25800573EAD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D0851F22484C25800573EAD /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,7 @@
 			children = (
 				7D0851D924847F2700573EAD /* 2_ColorPicker */,
 				7D0851D824847F2700573EAD /* Products */,
+				7D0851F02484C25800573EAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,11 +66,20 @@
 				7D0851DC24847F2700573EAD /* SceneDelegate.swift */,
 				7D0851DE24847F2700573EAD /* ViewController.swift */,
 				7D0851E024847F2700573EAD /* Main.storyboard */,
+				7D0851EE2484BEBA00573EAD /* AboutRGBViewController.swift */,
 				7D0851E324847F2700573EAD /* Assets.xcassets */,
 				7D0851E524847F2700573EAD /* LaunchScreen.storyboard */,
 				7D0851E824847F2700573EAD /* Info.plist */,
 			);
 			path = 2_ColorPicker;
+			sourceTree = "<group>";
+		};
+		7D0851F02484C25800573EAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D0851F12484C25800573EAD /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D0851EF2484BEBA00573EAD /* AboutRGBViewController.swift in Sources */,
 				7D0851DF24847F2700573EAD /* ViewController.swift in Sources */,
 				7D0851DB24847F2700573EAD /* AppDelegate.swift in Sources */,
 				7D0851DD24847F2700573EAD /* SceneDelegate.swift in Sources */,

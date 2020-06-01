@@ -20,10 +20,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var colorNameLabel: UILabel!
     
+    @IBOutlet weak var sliderOne: UISlider!
+    @IBOutlet weak var sliderTwo: UISlider!
+    @IBOutlet weak var sliderThree: UISlider!
+    
     var valueOne: Int = 0
     var valueTwo: Int = 0
     var valueThree: Int = 0
     var userProvidedValue: String!
+    var colorMode: Int = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +37,11 @@ class ViewController: UIViewController {
 
     @IBAction func modeDidChange(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            rgbMode()
+            colorMode = 0;
+            resetApplication()
         } else if sender.selectedSegmentIndex == 1 {
-            hsbMode()
+            colorMode = 1;
+            resetApplication()
         } else {
             // Do Nothing
         }
@@ -71,26 +78,42 @@ class ViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    func rgbMode() {
-        firstColorLabel.text = "Red"
-        secondColorLabel.text = "Green"
-        thirdColorLabel.text = "Blue"
-        firstColorValueLabel.text = "0"
-        secondColorValueLabel.text = "0"
-        thirdColorValueLabel.text = "0"
+    @IBAction func resetAppPressed(_ sender: UIButton) {
+        resetApplication()
     }
     
-    func hsbMode() {
-        firstColorLabel.text = "Hue"
-        secondColorLabel.text = "Saturation"
-        thirdColorLabel.text = "Brightness"
+    func resetApplication() {
+        if colorMode == 0 {
+            firstColorLabel.text = "Red"
+            secondColorLabel.text = "Green"
+            thirdColorLabel.text = "Blue"
+            sliderOne.maximumValue = 255
+            sliderTwo.maximumValue = 255
+            sliderThree.maximumValue = 255
+        } else {
+            firstColorLabel.text = "Hue"
+            secondColorLabel.text = "Saturation"
+            thirdColorLabel.text = "Brightness"
+            sliderOne.maximumValue = 360
+            sliderTwo.maximumValue = 100
+            sliderThree.maximumValue = 100
+        }
         firstColorValueLabel.text = "0"
         secondColorValueLabel.text = "0"
         thirdColorValueLabel.text = "0"
+        sliderOne.value = 0;
+        sliderTwo.value = 0;
+        sliderThree.value = 0;
+        colorNameLabel.text = ""
+        view.backgroundColor = UIColor.white
     }
     
     func changeBackgroundColor() {
-        view.backgroundColor = UIColor (red: (CGFloat(valueOne)/255.0), green: (CGFloat(valueTwo)/255.0), blue: (CGFloat(valueThree)/255.0), alpha: 1)
+        if colorMode == 0 {
+          view.backgroundColor = UIColor (red: (CGFloat(valueOne)/255.0), green: (CGFloat(valueTwo)/255.0), blue: (CGFloat(valueThree)/255.0), alpha: 1)
+        } else {
+           view.backgroundColor = UIColor (hue: (CGFloat(valueOne)/255.0), saturation: (CGFloat(valueTwo)/255.0), brightness: (CGFloat(valueThree)/255.0), alpha: 1)
+        }
     }
 }
 
