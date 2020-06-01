@@ -1,11 +1,11 @@
 # ColorPicker - UIKIt / Swift #
 
 ## My Bio ##
-Name: Chun Wu
-Dicord: TM:Chun Wu
-Location: Ottawa ,ON Canada
-Programming Experience: Pretty signficant but have not focused on iOS mobile development.
-Goals / Hobbies / Interests:
+Name: Chun Wu. 
+Dicord: TM:Chun Wu. 
+Location: Ottawa ,ON Canada.  
+Programming Experience: Pretty signficant but have not focused on iOS mobile development.  
+Goals / Hobbies / Interests:  
 * Microservices
 * Big Data
 * CI/CD
