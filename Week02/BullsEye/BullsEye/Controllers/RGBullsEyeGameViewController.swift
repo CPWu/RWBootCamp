@@ -35,7 +35,7 @@ class RGBullsEyeGameViewController: UIViewController {
 
         guessLabel.backgroundColor = UIColor(rgbStruct: rgBullsEyeGame.sliderValue)
         targetLabel.backgroundColor = UIColor(rgbStruct: rgBullsEyeGame.targetValue)
-        print(UIColor(rgbStruct: rgBullsEyeGame.sliderValue))
+
         redLabel.text = "R \(rgBullsEyeGame.sliderValue.r)"
         greenLabel.text = "G \(rgBullsEyeGame.sliderValue.g)"
         blueLabel.text = "B \(rgBullsEyeGame.sliderValue.b)"

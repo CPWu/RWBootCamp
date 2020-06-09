@@ -23,7 +23,7 @@ public class RGBullsEyeGame {
         func newRound() {
             targetValue = RGB()
             sliderValue = RGB()
-            score += 1
+            round += 1
         }
     
         public func difference() -> Double {
@@ -33,7 +33,6 @@ public class RGBullsEyeGame {
         
         public func calculatePoints() -> Int {
             var points = 100 - Int(difference())
-            
             if difference() == 0 {
                 points += 100
             } else if difference() < 5 {

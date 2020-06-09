@@ -25,10 +25,11 @@ struct RGB {
     var r = Int.random(in: 0...255)
     var g = Int.random(in: 0...255)
     var b = Int.random(in: 0...255)
+    
     func difference(target: RGB) -> Double {
     let rDiff = Double(r - target.r)
     let gDiff = Double(g - target.g)
     let bDiff = Double(b - target.b)
-    return sqrt((rDiff * rDiff + gDiff * gDiff + bDiff * bDiff)/3.0) / 255.0
+    return (sqrt((rDiff * rDiff + gDiff * gDiff + bDiff * bDiff)/3.0) / 255.0) * 100
     }
 }
