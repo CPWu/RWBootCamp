@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BullsEyeGameView: UIView {
+public class BullsEyeGameView: UIView {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var targetLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!

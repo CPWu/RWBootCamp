@@ -14,6 +14,9 @@
 		7D6D15C7248DDCF700285055 /* BullsEyeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6D15C6248DDCF700285055 /* BullsEyeGame.swift */; };
 		7D6D15C9248DDD8500285055 /* BullsEyeGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6D15C8248DDD8500285055 /* BullsEyeGameView.swift */; };
 		7D6D15CD248DE5BF00285055 /* BullsEyeGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6D15CA248DDDEF00285055 /* BullsEyeGameViewController.swift */; };
+		7DD9426D248EF6C4007F5FBD /* RGBullsEyeGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD9426C248EF6C4007F5FBD /* RGBullsEyeGameViewController.swift */; };
+		7DD94271248EF8DA007F5FBD /* RGBullsEyeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD94270248EF8DA007F5FBD /* RGBullsEyeGame.swift */; };
+		7DD94273248EFAA2007F5FBD /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD94272248EFAA2007F5FBD /* RGB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		7D6D15C8248DDD8500285055 /* BullsEyeGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeGameView.swift; sourceTree = "<group>"; };
 		7D6D15CA248DDDEF00285055 /* BullsEyeGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeGameViewController.swift; sourceTree = "<group>"; };
 		7DD1E162248DFB4700502F38 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7DD9426C248EF6C4007F5FBD /* RGBullsEyeGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBullsEyeGameViewController.swift; sourceTree = "<group>"; };
+		7DD94270248EF8DA007F5FBD /* RGBullsEyeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBullsEyeGame.swift; sourceTree = "<group>"; };
+		7DD94272248EFAA2007F5FBD /* RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				7D6D15C6248DDCF700285055 /* BullsEyeGame.swift */,
+				7DD94270248EF8DA007F5FBD /* RGBullsEyeGame.swift */,
+				7DD94272248EFAA2007F5FBD /* RGB.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -92,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				7D6D15CA248DDDEF00285055 /* BullsEyeGameViewController.swift */,
+				7DD9426C248EF6C4007F5FBD /* RGBullsEyeGameViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -183,10 +192,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DD9426D248EF6C4007F5FBD /* RGBullsEyeGameViewController.swift in Sources */,
 				352A679920D171E800D5BF05 /* AppDelegate.swift in Sources */,
 				7D6D15C7248DDCF700285055 /* BullsEyeGame.swift in Sources */,
 				7D6D15CD248DE5BF00285055 /* BullsEyeGameViewController.swift in Sources */,
+				7DD94273248EFAA2007F5FBD /* RGB.swift in Sources */,
 				7D6D15C9248DDD8500285055 /* BullsEyeGameView.swift in Sources */,
+				7DD94271248EF8DA007F5FBD /* RGBullsEyeGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
