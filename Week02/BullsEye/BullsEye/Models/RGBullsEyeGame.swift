@@ -19,7 +19,13 @@ public class RGBullsEyeGame {
             self.score = 0
             self.round = 1
         }
-            
+
+        func newRound() {
+            targetValue = RGB()
+            sliderValue = RGB()
+            score += 1
+        }
+    
         public func difference() -> Double {
             let diff = sliderValue.difference(target: targetValue)
             return diff

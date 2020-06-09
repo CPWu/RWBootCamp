@@ -48,7 +48,7 @@ class RGBullsEyeGameViewController: UIViewController {
     }
     
     public func nextRound() {
-        rgBullsEyeGame.round += 1
+        rgBullsEyeGame.newRound()
         updateView()
     }
     
