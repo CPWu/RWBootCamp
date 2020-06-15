@@ -68,19 +68,59 @@
 		185CB1FA23C78CE6009F7571 /* Cryptly-starter */ = {
 			isa = PBXGroup;
 			children = (
+				7D6D855A24983E3A00DBFD96 /* Views */,
+				7D6D855924983E0900DBFD96 /* Resources */,
+				7D6D855824983E0100DBFD96 /* Supporting Files */,
+				7D6D855624983D6A00DBFD96 /* Controllers */,
+				7D6D855524983D3B00DBFD96 /* Models */,
 				A1F9E0552492697800323226 /* ThemeManager */,
 				A1F9E0542492696200323226 /* Data */,
-				185CB1FB23C78CE6009F7571 /* AppDelegate.swift */,
-				185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */,
-				A1F9E048249267DB00323226 /* HomeViewController.swift */,
-				185CB20123C78CE6009F7571 /* Main.storyboard */,
-				A1F9E04E249268D200323226 /* Model.swift */,
-				A1F9E0522492690B00323226 /* Theme.swift */,
-				185CB20423C78CE8009F7571 /* Assets.xcassets */,
-				180DC61423C78D9800486B1A /* LaunchScreen.storyboard */,
-				185CB20923C78CE8009F7571 /* Info.plist */,
 			);
 			path = "Cryptly-starter";
+			sourceTree = "<group>";
+		};
+		7D6D855524983D3B00DBFD96 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A1F9E04E249268D200323226 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7D6D855624983D6A00DBFD96 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A1F9E048249267DB00323226 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7D6D855824983E0100DBFD96 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				185CB1FB23C78CE6009F7571 /* AppDelegate.swift */,
+				185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */,
+				A1F9E0522492690B00323226 /* Theme.swift */,
+				185CB20923C78CE8009F7571 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D6D855924983E0900DBFD96 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				185CB20423C78CE8009F7571 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7D6D855A24983E3A00DBFD96 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				185CB20123C78CE6009F7571 /* Main.storyboard */,
+				180DC61423C78D9800486B1A /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A1F9E0542492696200323226 /* Data */ = {
@@ -336,7 +376,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Cryptly-starter/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Cryptly-starter/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -353,7 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Cryptly-starter/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Cryptly-starter/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
