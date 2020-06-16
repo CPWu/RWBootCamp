@@ -124,7 +124,7 @@ class HomeViewController: UIViewController{
 
 extension HomeViewController: Themeable {
   func registerForTheme() {
-    NotificationCenter.default.addObserver(self, selector: #selector(themeChanged), name: Notification.Name.init("themeChanged"), object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(themeChanged), name: NSNotification.Name.init("themeChanged"), object: nil)
   }
 
   func unregisterForTheme() {
