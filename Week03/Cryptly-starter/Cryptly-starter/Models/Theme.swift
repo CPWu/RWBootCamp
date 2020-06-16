@@ -48,15 +48,15 @@ protocol Themeable {
 }
 
 struct LightTheme: Theme {
-  var backgroundColor = UIColor(red: 34/255, green: 40/255, blue: 49/255, alpha: 1.0)
-  var textColor = UIColor(red: 0/255, green: 173/255, blue: 181/255, alpha: 1.0)
-  var borderColor = UIColor(red: 57/255, green: 62/255, blue: 70/255, alpha: 1.0)
-  var widgetBackgroundColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1.0)
+  var backgroundColor = UIColor(red: 249/255, green: 247/255, blue: 247/255, alpha: 1.0)
+  var textColor = UIColor(red: 17/255, green: 45/255, blue: 78/255, alpha: 1.0)
+  var borderColor = UIColor(red: 219/255, green: 226/255, blue: 239/255, alpha: 1.0)
+  var widgetBackgroundColor = UIColor(red: 219/255, green: 226/255, blue: 239/255, alpha: 1.0)
 }
 
 struct DarkTheme: Theme {
-  var backgroundColor = UIColor(red: 34/255, green: 40/255, blue: 49/255, alpha: 1.0)
+  var backgroundColor = UIColor(red: 57/255, green: 62/255, blue: 70/255, alpha: 1.0)
   var textColor = UIColor(red: 0/255, green: 173/255, blue: 181/255, alpha: 1.0)
   var borderColor = UIColor(red: 57/255, green: 62/255, blue: 70/255, alpha: 1.0)
-  var widgetBackgroundColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1.0)
+  var widgetBackgroundColor = UIColor(red: 34/255, green: 40/255, blue: 49/255, alpha: 1.0)
 }

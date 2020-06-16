@@ -119,6 +119,7 @@ class HomeViewController: UIViewController{
   
   @IBAction func switchPressed(_ sender: Any) {
     ThemeManager.shared.set(theme: themeSwitch.isOn ? DarkTheme() : LightTheme())
+    
   }
 }
 
@@ -133,6 +134,8 @@ extension HomeViewController: Themeable {
 
   @objc func themeChanged() {
     guard let theme = ThemeManager.shared.currentTheme else { return }
+    
+    headingLabel.textColor = theme.textColor
     
     // View BG Color
     view1.backgroundColor = theme.widgetBackgroundColor
@@ -151,7 +154,6 @@ extension HomeViewController: Themeable {
     
     // Background Color
     self.view.backgroundColor = theme.backgroundColor
-    
   }
 }
 
