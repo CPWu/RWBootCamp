@@ -118,21 +118,40 @@ class HomeViewController: UIViewController{
   }
   
   @IBAction func switchPressed(_ sender: Any) {
-    // Do Nothing
+    ThemeManager.shared.set(theme: themeSwitch.isOn ? DarkTheme() : LightTheme())
   }
 }
 
 extension HomeViewController: Themeable {
-func registerForTheme() {
+  func registerForTheme() {
+    NotificationCenter.default.addObserver(self, selector: #selector(themeChanged), name: Notification.Name.init("themeChanged"), object: nil)
+  }
 
+  func unregisterForTheme() {
+    NotificationCenter.default.removeObserver(self)
+  }
+
+  @objc func themeChanged() {
+    guard let theme = ThemeManager.shared.currentTheme else { return }
+    
+    // View BG Color
+    view1.backgroundColor = theme.widgetBackgroundColor
+    view2.backgroundColor = theme.widgetBackgroundColor
+    view3.backgroundColor = theme.widgetBackgroundColor
+    
+    // Layer Border Color
+    view1.layer.borderColor = theme.borderColor.cgColor
+    view2.layer.borderColor = theme.borderColor.cgColor
+    view3.layer.borderColor = theme.borderColor.cgColor
+    
+    // ViewTextLabels Text Color
+    view1TextLabel.textColor = theme.textColor
+    view2TextLabel.textColor = theme.textColor
+    view3TextLabel.textColor = theme.textColor
+    
+    // Background Color
+    self.view.backgroundColor = theme.backgroundColor
+    
+  }
 }
-
-func unregisterForTheme() {
-  
-}
-
-@obj func themeChanged() {
-  
-}
-
 
