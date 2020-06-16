@@ -52,15 +52,16 @@ class HomeViewController: UIViewController{
     setView1Data()
     setView2Data()
     setView3Data()
-    print(cryptoData)
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    registerForTheme()
   }
   
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
+    unregisterForTheme()
   }
 
   func setupViews() {
@@ -117,5 +118,21 @@ class HomeViewController: UIViewController{
   }
   
   @IBAction func switchPressed(_ sender: Any) {
+    // Do Nothing
   }
 }
+
+extension HomeViewController: Themeable {
+func registerForTheme() {
+
+}
+
+func unregisterForTheme() {
+  
+}
+
+@obj func themeChanged() {
+  
+}
+
+
