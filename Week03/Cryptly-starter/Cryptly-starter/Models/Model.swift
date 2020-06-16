@@ -34,10 +34,20 @@ import Foundation
 
 struct CryptoCurrency: Codable {
   
+  enum Trend: Int, Codable {
+    case Rise, Fall
+  }
+  
   // Variables
   let name: String
   let symbol: String
   let currentValue: Double
   let previousValue: Double
   
+  var difference: Double {
+    currentValue - previousValue
+  }
+  var trend: Trend {
+    difference > 0 ? .Rise : .Fall
+  }
 }

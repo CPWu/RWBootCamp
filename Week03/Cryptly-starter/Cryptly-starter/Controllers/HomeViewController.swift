@@ -96,13 +96,24 @@ class HomeViewController: UIViewController{
     view2TextLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
   }
   
+  // Shows all tickers of CryptoCurrencies
   func setView1Data() {
-  }
+    guard let cryptoCurrencies = cryptoData else { return }
+    let allCurrencies = cryptoCurrencies.reduce(""){$0 + $1.name + ", "}.dropLast(2)
+    view1TextLabel.text = String(allCurrencies)
+   }
   
+  // Shows all tickers of CryptoCurrencies that have gone up in value
   func setView2Data() {
+    guard let cryptoCurrencies = cryptoData else { return }
+    let increasedCurrencies = cryptoCurrencies.filter{ $0.trend == .Rise }.reduce(""){$0 + $1.name + ", "}.dropLast(2)
+    view2TextLabel.text = String(increasedCurrencies)
   }
   
   func setView3Data() {
+    guard let cryptoCurrencies = cryptoData else { return }
+    let decreasedCurrencies = cryptoCurrencies.filter{ $0.trend == .Fall }.reduce(""){$0 + $1.name + ", "}.dropLast(2)
+    view3TextLabel.text = String(decreasedCurrencies)
   }
   
   @IBAction func switchPressed(_ sender: Any) {
